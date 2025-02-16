@@ -19,6 +19,10 @@ How to install SearXNG   for  using with Open WebUI
 
       server:
         # base_url is defined in the SEARXNG_BASE_URL environment variable, see .env and docker-compose.yml
+        # can use command $(openssl rand -hex 32)  to generate
+        # on windows using $randomBytes = New-Object byte[] 32
+        # (New-Object Security.Cryptography.RNGCryptoServiceProvider).GetBytes($randomBytes)
+        # $secretKey = -join ($randomBytes | ForEach-Object { "{0:x2}" -f $_ })
         secret_key: "ul01f2235e4db22c15d61df5f994405f180cbd8f40de31b7a1141e3efb8b0f07f7trasecretkey"  # change this!
         limiter: true  # can be disabled for a private instance
         image_proxy: true
